@@ -1,0 +1,21 @@
+body {
+  background: #420042;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+.image {
+  background-repeat: no-repeat;
+  background-position-x: center;
+  height: 89px;
+  width: 100%;
+}
+.austerity {
+  background-image: url('https://www.gigaglitters.com/created/hlupPRQQpM.gif');
+}
+.party {
+  background-image: url('https://www.gigaglitters.com/created/BikqzCA9tI.gif');
+}
