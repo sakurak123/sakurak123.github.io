@@ -19,3 +19,9 @@ body {
 .party {
   background-image: url('https://www.gigaglitters.com/created/BikqzCA9tI.gif');
 }
+@media (max-width: 767px) {
+  .image {
+    background-size: contain;
+    height: 55px;
+  }
+}
