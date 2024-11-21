@@ -1,27 +1,559 @@
+:root {
+	--green: #336600;
+	--purple: #330033;
+	--lavender: #ccf;
+}
+
+html {
+	font-size: 10px;
+}
 body {
-  background: #420042;
+	font-size: 18px;
+	font-family: "Noto Sans", sans-serif;
+	margin: 0;
+	padding: 0;
 }
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
+section {
+	max-width: 150rem;
+	margin: auto;
+	padding: 1.5rem;
 }
-.image {
-  background-repeat: no-repeat;
-  background-position-x: center;
-  height: 89px;
-  width: 100%;
+footer {
+	padding-top: 10rem;
+	padding-bottom: 7.5rem;
 }
-.austerity {
-  background-image: url('https://www.gigaglitters.com/created/hlupPRQQpM.gif');
+footer a {
+	color: var(--purple);
+	margin: 1rem;
+	text-transform: uppercase;
+	text-decoration: none;
 }
-.party {
-  background-image: url('https://www.gigaglitters.com/created/BikqzCA9tI.gif');
+h1 {
+	font-family: "Noto Sans", sans-serif;
 }
-@media (max-width: 767px) {
-  .image {
-    background-size: contain;
-    height: 55px;
-  }
+/* Elements */
+.heart-btn {
+	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="172px" height="151px"><path fill-rule="evenodd" fill="rgb(204, 204, 255)" d="M85.960,33.767 C63.695,-18.246 0.407,-6.110 -0.009,54.258 C-0.240,87.414 30.127,99.807 50.346,113.061 C69.951,125.916 83.905,143.500 86.092,150.986 C87.964,143.651 103.506,125.570 121.654,112.702 C141.498,98.632 172.240,87.053 172.009,53.898 C171.591,-6.620 107.202,-16.171 85.960,33.767 Z"/></svg>') ;
+	background-repeat: no-repeat;
+	background-size: contain;
+	color: var(--purple);
+	font-size: 29px;
+	font-weight: 300;
+	text-decoration: none;
+	top: 17.5rem;
+	right: 15rem;
+	height: 15rem;
+	width: 172px;
+}
+.heart-btn span {
+	color: var(--purple);
+	margin-top: -37px;
+}
+/* Home */
+section.home {
+	margin-top: 25rem;
+	position: relative;
+}
+section.home h1 {
+	font-size: 41px;
+	font-weight: 400;
+	letter-spacing: 5px;
+	padding: 6rem 1.5rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+section.home #hero {
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	opacity: 0;
+	text-align: center;
+	width: 100%;
+	z-index: 99;
+	visibility: hidden;
+	transition: 1s ease all;
+}
+section.home #hero img {
+	height: auto;
+	margin-top: 25vh;
+	width: 90%;
+}
+section.home nav a.about {
+	background-color: transparent;
+	background-image: url('assets/buttons/red_button.png');
+	background-repeat: no-repeat;
+	border: 0;
+	color: white;
+	font-size: 26px;
+	height: 195px;
+	top: 6rem;
+	left: 6rem;
+	position: fixed;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 195px;
+	z-index: 9;
+}
+section.home .img-container img {
+	height: 100%;
+	width: 100%;
+}
+section.home .book-img {
+	display: block;
+	height: auto;
+	padding-bottom: 5rem;
+	width: 60%;
+}
+section.home .book-img.hearts {
+	top: 0;
+	right: 0;
+	margin-left: auto;
+}
+section.home .book-img.lie {
+	top: 13rem;
+	left: 0;
+}
+/* About Page */
+section.about a {
+	text-decoration: none;
+	color: red;
+}
+section.about img.text-wrap-left {
+	float: left;
+	margin: 1.5rem 1.5rem 1.5rem 0;
+}
+section.about img.text-wrap-right {
+	float: right;
+	margin: 1.5rem 0 1.5rem 1.5rem;
+}
+section.about img.about-header {
+	margin-top: 5rem;
+	width: 100%;
+}
+section.about .images {
+	width: 55%;
+}
+section.about p {
+	color: red;
+	font-size: 1.8rem;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+section.about .images img {
+	top: 30rem;
+	width: 3rem;
+	height: auto;
+}
+section.about img.bush {
+	top: 1rem;
+	right: 0;
+	width: 7.5rem;
+}
+section.about img.night {
+	top: 11rem;
+	right: 37rem;
+	width: 5rem;
+}
+section.about img.grass {
+	top: 40rem;
+	right: 15rem;
+	width: 13.5rem;
+}
+section.about img.red {
+	top: 77rem;
+	right: 11rem;
+	width: 8rem;
+}
+section.about img.sky {
+	top: 122rem;
+	right: 8rem;
+	width: 9rem;
+	margin-left: 5rem;
+}
+section.about img.cake {
+	display: block;
+	float: none;
+	top: 151rem;
+	right: 5rem;
+	width: 50%;
+	margin: auto;
+}
+section.about img.sunset {
+	top: 182rem;
+	right: 17rem;
+	margin-top: 15rem;
+	width: 5rem;
+}
+section.about img.park {
+	top: 208rem;
+	right: 5rem;
+	width: 14rem;
+}
+/* Book Page for 29 Hearts */
+
+section.book-hearts h1 {
+	color: var(--green);
+	font-size: 2.2rem;
+	font-weight: 300;
+	text-transform: lowercase;
+}
+section.book-hearts p {
+	color: var(--green);
+	font-weight: 300;
+}
+section.book-hearts img.img-hearts {
+	align-self: center;
+	height: auto;
+}
+section.book-hearts img.img-hearts.stacked-books {
+	max-width: 431px;
+	width: 100%;
+}
+section.book-hearts p.first {
+	font-size: 22px;
+	margin-bottom: 0;
+}
+section.book-hearts img.img-hearts.cactus-rose {
+	right: -2rem;
+	bottom: -17rem;
+	padding-top: 2rem;
+	width: 100%;
+	max-width: 227px;
+}
+section.book-hearts img.img-hearts.ball {
+	transform: translateX(15rem);
+	width: 100%;
+	max-width: 224px;
+}
+section.book-hearts p.second {
+	font-size: 22px;
+}
+section.book-hearts img.img-hearts.motorcycle {
+	width: 100%;
+	max-width: 40.5rem;
+}
+section.book-hearts img.img-hearts.book-text {
+	padding-top: 2rem;
+	width: 314px;
+}
+section.book-hearts img.img-hearts.vertical-stack {
+	padding-top: 2rem;
+	max-width: 477px;
+	width: 100%;
+}
+section.book-hearts .row:nth-child(4) {
+	padding-top: 1rem;
+}
+section.book-hearts .row:nth-child(4) .heart-btn {
+	transform: translate(0rem, 10rem);
+}
+section.book-hearts p.third {
+	font-size: 22px;
+}
+/* Book Page for The Lie */
+section.book-lie {
+	font-size: 22px;
+}
+section.book-lie h1 {
+	font-size: 5rem;
+	font-weight: 400;
+}
+section.book-lie img {
+	height: auto;
+	width: 100%;
+}
+section.book-lie img.btn {
+	width: 31rem;
+}
+section.book-lie .row:nth-child(1) img {
+	max-width: 60rem;
+}
+section.book-lie .row:nth-child(2) p {
+	max-width: 50rem;
+}
+section.book-lie .row:nth-child(2) img {
+	top: -15rem;
+	right: 0;
+}
+section.book-lie .row:nth-child(4) img:nth-child(2) {
+	margin-right: 19rem;
+}
+/* Order Page */
+section.order {
+	color: var(--green);
+	font-size: 1.8rem;
+	overflow: hidden;
+}
+section.order a {
+	color: var(--green);
+	text-decoration: none;
+}
+section.order p {
+	max-width: 75rem;
+}
+section.order .heart-btn:nth-child(1){
+	top: -7rem;
+	left: 35rem;
+	transform: translateX(15rem);
+}
+section.order .heart-btn:nth-child(2){
+	top: 82rem;
+	right: 6rem;
+}
+section.order .heart-btn:nth-child(3){
+	top: 111rem;
+	right: -9rem;
+}
+section.order .heart-btn:nth-child(4){
+	top: 145rem;
+	left: 15rem;
+}
+section.order .flower-btn img {
+	max-width: 24rem;
+}
+section.order .flower-btn:nth-child(1){
+	top: 13rem;
+	right: 7rem;
+}
+section.order .flower-btn:nth-child(2){
+	top: 75rem;
+	left: 40rem;
+}
+section.order .flower-btn:nth-child(3){
+	top: 100rem;
+	left: 65rem;
+}
+section.order .flower-btn:nth-child(4){
+	top: 150rem;
+	left: -12rem;
+}
+/* Utilities */
+.d-flex {
+	display: flex;
+	flex-direction: column;
+}
+.align-center {
+	align-items: center;
+	justify-content: center;
+}
+.align-start {
+	align-items: start;
+}
+.justify-between {
+	justify-content: space-between;
+}
+.position-relative {
+	position: relative;
+}
+@media screen and (max-width: 992px) {
+	.hide-mobile {
+		display: none !important;
+	}
+}
+@media screen and (min-width: 992px) {
+	section {
+		padding: 0;
+	}
+	/* Home */
+	section.home {
+		margin-bottom: 70rem;
+	}
+	section.home h1 {
+		padding: 6rem 0;
+	}
+	section.home #hero img {
+		margin-top: 0;
+		width: 100%;
+	}
+	section.home nav a.about {
+		left: 30rem;
+	}
+	section.home .book-img {
+		position: absolute;
+		width: 100%;
+	}
+	section.home .book-img.hearts {
+		max-width: 43rem;
+		right: 2rem;
+	}
+	section.home .book-img.lie {
+		max-width: 53rem;
+	}
+	/* About */
+	section.about {
+		margin-bottom: 85rem;
+	}
+	section.about img.hide-desktop {
+		display: none;
+	}
+	section.about img.about-header {
+		max-width: 82rem;
+	}
+	section.about .content {
+		margin-top: 16rem;
+		padding-left: 5rem;
+		width: 45%;
+	}
+	section.about p {
+		font-size: 2.5rem;
+	}
+	section.about img.park {
+		width: 42rem;
+	}
+	section.about img.bush {
+		width: 23rem;
+	}
+	section.about img.night {
+		right: 27rem;
+		width: 18rem;
+	}
+	section.about img.grass {
+		width: 27rem;
+	}
+	section.about img.red {
+		width: 36rem;
+	}
+	section.about img.sky {
+		margin-left: initial;
+		width: 27rem;
+	}
+	section.about img.cake {
+		width: 38rem;
+	}
+	section.about img.sunset {
+		margin-top: 0;
+		width: 30rem;
+	}
+	section.book-hearts {
+		padding: 5.5rem 7.5rem;
+	}
+	section.book-hearts h1 {
+		font-size: 5.8rem;
+		padding-left: 5rem;
+	}
+	section.book-hearts p.first {
+		padding-left: 2rem;
+	}
+	section.book-hearts img.img-hearts.cactus-rose {
+		padding-top: 0;
+		bottom: -9rem;
+		right: -19rem;
+	}
+	section.book-hearts p.second {
+		font-size: 30px;
+		margin-right: 5rem;
+		max-width: 56rem;
+	}
+	section.book-hearts img.img-hearts.motorcycle {
+		transform: translateY(3rem);
+		width: 54.5rem;
+	}
+	section.book-hearts img.img-hearts.book-text {
+		transform: translateY(-5rem);
+	}
+	section.book-hearts img.img-hearts.vertical-stack {
+		padding-top: 0;
+	}
+	section.book-hearts .row:nth-child(2) {
+		padding: 10rem 0 3rem;
+	}
+	section.book-hearts .row:nth-child(3) {
+		margin-left: 6rem;
+	}
+	section.book-hearts .row:nth-child(4) {
+		padding-top: 4rem;
+	}
+	section.book-hearts .row:nth-child(4) .heart-btn {
+		transform: translate(13.5rem, 10rem);
+	}
+	section.book-hearts p.third {
+		margin-left: 13rem;
+		max-width: 65rem;
+	}
+	/* Book Page for The Lie */
+	section.book-lie {
+		margin: 0 auto 20rem;
+		max-width: 110rem;
+	}
+	section.book-lie h1 {
+		margin-top: 7rem;
+	}
+	section.book-lie .row:nth-child(1) img {
+		padding-right: 2.5rem;
+	}
+	section.book-lie .row:nth-child(2) p {
+		margin-bottom: 5rem;
+	}
+	section.book-lie .row:nth-child(3) img:nth-child(1) {
+		max-width: 44rem;
+		transform: translateX(10rem);
+	}
+	section.book-lie .row:nth-child(3) img:nth-child(2) {
+		max-width: 36rem;
+		transform: translate(29rem, 5rem);
+	}
+	section.book-lie .row:nth-child(4) {
+		margin-top: 6rem;
+	}
+	section.book-lie .row:nth-child(4) img:nth-child(1) {
+		transform: translate(-3rem, 23rem);
+	}
+	section.book-lie .row:nth-child(4) img:nth-child(2) {
+		transform: translate(7rem, 0);
+		width: 28rem;
+	}
+	section.book-lie .row:nth-child(5) img {
+		max-width: 37rem;
+		transform: translate(48rem, 13rem);
+	}
+	/* Order Page */
+	section.order {
+		font-size: 4.5rem;
+		padding: 8rem 10rem 120rem;
+	}
+	section.order .heart-btn:nth-child(1){
+		transform: translateX(0);
+	}
+	/* Utilities */
+
+	.d-flex {
+		flex-direction: row;
+	}
+	.align-end {
+		align-items: end;
+	}
+	.position-absolute {
+		position: absolute;
+	}
+}
+@media screen and (min-width: 1200px) {
+	section.home .book-img.lie {
+		left: 20rem;
+	}
+	section.about img.night {
+		right: 37rem;
+	}
+	section.about img.sunset {
+		top: 178rem;
+		right: 52rem;
+		width: 36rem;
+	}
+	section.book-hearts img.img-hearts.cactus-rose {
+		right: -23rem;
+	}
+	section.book-hearts .row:nth-child(4) .heart-btn {
+		transform: translate(27rem, 10rem);
+	}
+}
+@media screen and (min-width: 1245px) {
+	section.about img.red {
+		right: 29rem;
+	}
+}
+@media screen and (min-width: 1300px) {
+	section.home .book-img.hearts {
+		right: 7rem;
+	}
 }
